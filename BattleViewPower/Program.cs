@@ -1,6 +1,18 @@
+using BattleViewPower.Contacts;
+using BattleViewPower.Context;
+using BattleViewPower.Repository;
+using Npgsql;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//var conStrBuilder = new NpgsqlConnectionStringBuilder(
+//        builder.Configuration.GetConnectionString("connectionString"));
+//conStrBuilder.Password = builder.Configuration["DbPassword"];
+//var connection = conStrBuilder.ConnectionString;
+
+builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
