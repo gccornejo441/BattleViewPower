@@ -6,6 +6,6 @@ namespace BattleViewPower.Contacts
     {
         public Task<IEnumerable<Company>> GetCompanies();
 
-        
+        public Task<IEnumerable<User>> GetUser();
     }
 }

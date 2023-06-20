@@ -24,5 +24,21 @@ namespace BattleViewPower.Repository
                 return companies.ToList();
             }
         }
+
+        public Task<IEnumerable<User>> GetUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public Task<IEnumerable<User>> GetUser()
+        //{
+        //    var query = "SELECT * FROM users";
+
+        //    using (var connection = _context.CreateConnection())
+        //    {
+        //        var users = await connection.QueryAsync<User>(query);
+        //        return users.ToList();
+        //    }
+        //}
     }
 }
